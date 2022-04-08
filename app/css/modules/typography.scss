@@ -1,0 +1,128 @@
+@import "../mixins.scss";
+
+/*Global Titles*/
+
+h1, h2, h3, h4, h5, h6 {
+  &.is-global-title {
+    color: $c-primary;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: none;
+  }
+}
+
+h1.is-global-title {
+  @include font(24);
+}
+
+h2.is-global-title {
+  @include font(20);
+}
+
+h3.is-global-title {
+  @include font(18);
+}
+
+h4.is-global-title {
+  @include font(16, 28);
+}
+
+h5.is-global-title {
+  @include font(14, 24);
+}
+
+h6.is-global-title {
+  @include font(14, 20);
+}
+
+/* End Global Titles */
+
+/* Global Link */
+a.is-global-link,
+.is-global-link {
+  color: $c-default;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* End Global Link */
+
+.is-underline-text {
+  text-decoration: underline;
+}
+
+[class*='is-select-text-'] {
+  display: inline-block;
+  color: $c-white;
+  line-height: $default-lh;
+}
+
+.is-select-text-default {
+  background: $c-default;
+}
+
+.is-select-text-dark {
+  background: $c-senary;
+}
+
+/* First Letter */
+.f-first-letter {
+  &:first-letter {
+    color: $c-default;
+    font-size: 400%;
+    line-height: 1;
+  }
+  &.j-fl-sizer {
+    &:first-letter {
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+}
+
+.b-first-letter {
+  overflow: hidden;
+
+  &.j-fl-sizer span.fl,
+  &:first-letter {
+    display: block;
+    float: left;
+    margin-right: 8px;
+  }
+
+  &.j-fl-sizer {
+    &:first-letter {
+      display: inline;
+      float: none;
+      margin: 0;
+    }
+  }
+}
+
+.f-first-letter--secondary:first-letter {
+  color: $c-senary;
+}
+
+.b-first-letter--circle.j-fl-sizer span.fl,
+.b-first-letter--square.j-fl-sizer span.fl {
+  background: $c-default;
+  padding: 10px;
+  line-height: 80%;
+  text-align: center;
+}
+
+.b-first-letter--circle.j-fl-sizer span.fl {
+  border-radius: 50%;
+}
+
+.f-first-letter--circle.j-fl-sizer span.fl,
+.f-first-letter--square.j-fl-sizer span.fl {
+  color: $c-white;
+  font-size: 180%;
+}
+
+/* End First Letter */
